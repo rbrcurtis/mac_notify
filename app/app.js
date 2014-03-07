@@ -35,8 +35,10 @@ exports.send = function(){
     }
     
     var command = "'"+path.join(__dirname, '../lib/terminal-notifier.app/Contents/MacOS/terminal-notifier')+"'";
+    
+    command += attrs;
+    
     console.log('command', command);
-    command += attrs
     
     exec(command, function(e){
         if(e){
